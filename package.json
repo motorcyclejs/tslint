@@ -1,0 +1,25 @@
+{
+  "name": "@motorcycle/tslint",
+  "version": "1.0.0",
+  "description": "TSLint for Motorcycle.js Projects",
+  "main": "index.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motorcyclejs/tslint.git"
+  },
+  "keywords": [
+    "motorcycle",
+    "tslint",
+    "typescript",
+    "lint"
+  ],
+  "author": "Tylor Steinberger <tlsteinberger167@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motorcyclejs/tslint/issues"
+  },
+  "homepage": "https://github.com/motorcyclejs/tslint#readme"
+}
