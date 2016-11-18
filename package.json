@@ -2,7 +2,7 @@
   "name": "@motorcycle/tslint",
   "version": "1.0.0",
   "description": "TSLint for Motorcycle.js Projects",
-  "main": "index.json",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

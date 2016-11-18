@@ -1,4 +1,4 @@
-{
+module.exports = {
   "rules": {
     "adjacent-overload-signatures": true,
     "curly": false,
