@@ -32,7 +32,6 @@ module.exports = {
     "no-inferrable-types": [
       true
     ],
-    "no-unreachable": true,
     "no-var-keyword": true,
     "variable-name": [
       true,
