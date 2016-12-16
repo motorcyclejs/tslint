@@ -43,6 +43,7 @@ module.exports = {
     "no-empty": false,
     "no-shadowed-variable": true,
     "no-unused-expression": true,
+    "no-unused-variable": true,
     "triple-equals": true,
     "no-use-before-declare": true,
     "jsdoc-format": true,
