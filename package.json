@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/motorcyclejs/tslint/issues"
   },
-  "homepage": "https://github.com/motorcyclejs/tslint#readme"
+  "homepage": "https://github.com/motorcyclejs/tslint#readme",
+  "dependencies": {
+    "tslint-eslint-rules": "^3.4.0",
+    "tslint-immutable": "^2.1.0",
+    "tslint-microsoft-contrib": "^4.0.0",
+    "vrsource-tslint-rules": "^4.0.1"
+  }
 }
