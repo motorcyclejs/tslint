@@ -40,7 +40,7 @@ module.exports = {
         'ignore-module': '(\.html|\.css|\.sass|\.scss)'
       }
     ],
-    "no-inferrable-type": [
+    "no-inferrable-types": [
       true,
       "ignore-params",
       "ignore-properties"
@@ -118,7 +118,7 @@ module.exports = {
     "no-invalid-this": true,
     "no-misused-new": true,
     "no-null-keyword": false,
-    "no-shadowed-varaible": true,
+    "no-shadowed-variable": true,
     "no-string-literal": true,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
