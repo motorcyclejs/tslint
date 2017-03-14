@@ -232,7 +232,7 @@ module.exports = {
     ],
     "semicolon": [
       true,
-      "always"
+      "never"
     ],
     "space-before-function-paren": [
       true,
