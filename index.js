@@ -10,19 +10,18 @@ module.exports = {
     path.join(nodeModulesPath, 'tslint-microsoft-contrib')
   ],
   "rules": {
-    /* all TSLint rules as of March 14 2017 */
-    // TypeScript Only
     "adjacent-overload-signatures": true,
-    "ban-types": [false],
+    "ban-types": [
+      false
+    ],
     "member-access": [
       true,
-      "check-accesor",
-      // "check-constructor"
+      "check-accessor"
     ],
     "member-ordering": [
       true,
       {
-        order: [
+        "order": [
           "static-field",
           "instance-field",
           "constructor",
@@ -37,7 +36,7 @@ module.exports = {
     "no-import-side-effect": [
       true,
       {
-        'ignore-module': '(\.html|\.css|\.sass|\.scss)'
+        "ignore-module": "(.html|.css|.sass|.scss)"
       }
     ],
     "no-inferrable-types": [
@@ -47,31 +46,22 @@ module.exports = {
     ],
     "no-internal-module": true,
     "no-magic-numbers": [
-      true,
-      -1,
-      1
+      false
     ],
     "no-namespace": false,
     "no-non-null-assertion": true,
     "no-reference": true,
     "no-var-requires": true,
     "only-arrow-functions": [
-      true,
+      false,
       "allow-declarations"
     ],
     "prefer-for-of": true,
-    "promise-function-async": false,
     "typedef": [
       true,
-      "call-signature",
-      "arrow-call-signature",
       "parameter",
-      "arrow-parameter",
       "property-declaration",
-      "variable-declaration",
-      "member-variable-declaration",
-      "object-destructuring",
-      "array-destructuring"
+      "member-variable-declaration"
     ],
     "typedef-whitespace": [
       true,
@@ -91,20 +81,20 @@ module.exports = {
       }
     ],
     "unified-signatures": true,
-    // functionality
-    "await-promise": true,
-    "ban": [false],
+    "ban": [
+      false
+    ],
     "curly": false,
     "forin": true,
-    "import-blacklist": [false],
+    "import-blacklist": [
+      false
+    ],
     "label-position": true,
     "no-arg": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-console": [
-      false,
-      // 'log',
-      // 'error'
+      false
     ],
     "no-construct": true,
     "no-debugger": true,
@@ -112,9 +102,6 @@ module.exports = {
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
-    "no-floating-promises": [true],
-    "no-for-in-array": true,
-    "no-inferred-empty-object-type": true,
     "no-invalid-this": true,
     "no-misused-new": true,
     "no-null-keyword": false,
@@ -122,13 +109,8 @@ module.exports = {
     "no-string-literal": true,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-unbound-method": true,
-    "no-unsafe-any": false,
     "no-unsafe-finally": true,
-    "no-unused-expression": [
-      true,
-      "allow-fast-null-checks"
-    ],
+    "no-unused-expression": true,
     "no-unused-new": true,
     "no-unused-variable": [
       true,
@@ -136,25 +118,13 @@ module.exports = {
     ],
     "no-use-before-declare": false,
     "no-var-keyword": true,
-    "no-void-expression": true,
     "radix": true,
-    "restrict-plus-operands": true,
-    "strict-boolean-expressions": [
-      false,
-      // "allow-null-union",
-      // "allow-undefined-union",
-      // "allow-string",
-      // "allow-number",
-      // "allow-mix"
-    ],
-    "strict-type-predicates": true,
     "switch-default": true,
     "triple-equals": [
-      true,
+      true
     ],
     "typeof-compare": true,
     "use-isnan": true,
-    // maintainability
     "cyclomatic-complexity": [
       true,
       20
@@ -192,11 +162,8 @@ module.exports = {
         "singleline": "never"
       }
     ],
-    // style
     "align": [
       true,
-      // "parameters"
-      // "arguments"
       "statements"
     ],
     "array-type": [
@@ -204,23 +171,22 @@ module.exports = {
       "generic"
     ],
     "arrow-parens": [
-      true,
-      "ban-single-arg-parens"
+      true
     ],
     "arrow-return-shorthand": [
-      true,
-      // "multiline"
+      true
     ],
-    // "callable-types": true // no documentation ??
     "class-name": true,
     "comment-format": [
       true,
-      "check-space",
-      // "check-lowercase"
-      // "check-uppercase"
+      "check-space"
     ],
-    "completed-docs": [false],
-    "file-header": [false],
+    "completed-docs": [
+      false
+    ],
+    "file-header": [
+      false
+    ],
     "import-spacing": true,
     "interface-name": [
       true,
@@ -228,12 +194,10 @@ module.exports = {
     ],
     "interface-over-type-literal": false,
     "jsdoc-format": true,
-    "match-default-export-name": true,
     "newline-before-return": true,
     "new-parens": true,
     "no-angle-bracket-type-assertion": true,
-    "no-boolean-literal-compare": true,
-    "no-consecutive-blank-lines": true,
+    "no-consecutive-blank-lines": [true],
     "no-parameter-properties": true,
     "no-trailing-whitespace": [
       true,
@@ -241,7 +205,6 @@ module.exports = {
       "ignore-jsdoc"
     ],
     "no-unnecessary-initializer": true,
-    "no-unnecessary-qualifier": true,
     "object-literal-key-quotes": [
       true,
       "as-needed"
@@ -255,8 +218,12 @@ module.exports = {
       true,
       "ignore-for-loop"
     ],
-    "ordered-imports": [false],
-    "prefer-function-over-method": [true],
+    "ordered-imports": [
+      false
+    ],
+    "prefer-function-over-method": [
+      true
+    ],
     "prefer-method-signature": false,
     "quotemark": [
       true,
@@ -288,100 +255,5 @@ module.exports = {
       "check-typecast",
       "check-preblock"
     ]
-  },
-  /* TSLint ESLint Rules */
-  // possible errors
-  "no-constant-conditon": true,
-  "no-control-regex": true,
-  "no-duplicate-case": true,
-  "no-empty-character-class": true,
-  "no-ex-assign": true,
-  "no-extra-semi": true,
-  "no-inner-declarations": true,
-  "no-invalid-regexp": true,
-  "no-irregular-whitespace": true,
-  "no-regex-space": true,
-  "no-sparse-arrays": true,
-  "no-unexpected-multiline": true,
-  // best practices
-  "no-multi-spaces": true,
-  // style
-  "array-bracket-spacing": [
-    true,
-    "always"
-  ],
-  "block-spacing": true,
-  "brace-style": [
-    true,
-    "allman",
-    {
-      "allowSingleLine": true
-    }
-  ],
-  "ter-indent": [
-    true,
-    2
-  ],
-  "object-curly-spacing": [
-    true,
-    "always"
-  ],
-  "space-in-parens": [
-    true,
-    "never"
-  ],
-  "ter-arrow-body-style": [
-    true,
-    "as-needed"
-  ],
-  "ter-arrow-spacing": [true],
-  "prefer-arrow-callback": [
-    true,
-    {
-      "allowNamedFunctions": true
-    }
-  ],
-  /* vrsource tslint rules */
-  "conditional-expression-parens": true,
-  "dot-notation-rule": [
-    true,
-    {
-      'allow-pattern': '^[a-z]+(_[a-z]+)+$'
-    }
-  ],
-  "ext-variable-name": [ false ],
-  "max-params": [
-    true,
-    5
-  ],
-  "multiline-arrow": [
-    true,
-    "require-parens"
-  ],
-  "no-duplicate-imports": true,
-  "no-param-reassign": true,
-  "prefer-literal": [
-    "object",
-    "function"
-  ],
-  /* tslint immutable */
-  "readonly-interface": true,
-  "readonly-indexer": true,
-  "readonly-array": false,
-  "no-let": false,
-  "no-this": false,
-  "no-class": false,
-  "no-new": false,
-  "no-mixed-interface": true,
-  "no-expression-statement": false,
-  "no-arguments": true,
-  "no-label": false,
-  "no-semicolon-interface": false,
-  /* tslint microsoft */
-  "mocha-avoid-only": true,
-  "no-banned-terms": true,
-  "no-empty-line-after-opening-brace": true,
-  "no-unnecessary-bind": true,
-  "no-unnecessary-semicolons": true,
-  "fix-no-unused-imports": true
+  }
 }
