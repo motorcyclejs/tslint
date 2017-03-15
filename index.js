@@ -4,6 +4,7 @@ var nodeModulesPath = path.dirname(path.dirname(require.resolve('tslint-eslint-r
 
 module.exports = {
   "rulesDirectory": [
+    path.join(__dirname, 'dist'),
     path.join(nodeModulesPath, 'tslint-eslint-rules/dist/rules'),
     path.join(nodeModulesPath, 'vrsource-tslint-rules/rules'),
     path.join(nodeModulesPath, 'tslint-immutable/rules'),
@@ -16,7 +17,7 @@ module.exports = {
     ],
     "member-access": [
       true,
-      "check-accessor"
+      "check-accesor"
     ],
     "member-ordering": [
       true,
@@ -36,7 +37,7 @@ module.exports = {
     "no-import-side-effect": [
       true,
       {
-        "ignore-module": "(.html|.css|.sass|.scss)"
+        "ignore-module": "(\\.html|\\.css|\\.sass|\\.scss)"
       }
     ],
     "no-inferrable-types": [
@@ -60,8 +61,7 @@ module.exports = {
     "typedef": [
       true,
       "parameter",
-      "property-declaration",
-      "member-variable-declaration"
+      "property-declaration"
     ],
     "typedef-whitespace": [
       true,
@@ -110,7 +110,10 @@ module.exports = {
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
     "no-unsafe-finally": true,
-    "no-unused-expression": true,
+    "no-unused-expression": [
+      true,
+      "allow-fast-null-checks"
+    ],
     "no-unused-new": true,
     "no-unused-variable": [
       true,
@@ -125,6 +128,7 @@ module.exports = {
     ],
     "typeof-compare": true,
     "use-isnan": true,
+    // maintainability
     "cyclomatic-complexity": [
       true,
       20
@@ -199,11 +203,7 @@ module.exports = {
     "no-angle-bracket-type-assertion": true,
     "no-consecutive-blank-lines": [true],
     "no-parameter-properties": true,
-    "no-trailing-whitespace": [
-      true,
-      "ignore-comments",
-      "ignore-jsdoc"
-    ],
+    "no-trailing-whitespace": true,
     "no-unnecessary-initializer": true,
     "object-literal-key-quotes": [
       true,
@@ -254,6 +254,84 @@ module.exports = {
       "check-type",
       "check-typecast",
       "check-preblock"
-    ]
+    ],
+    "no-control-regex": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-ex-assign": true,
+    "no-extra-semi": true,
+    "no-inner-declarations": true,
+    "no-invalid-regexp": true,
+    "no-irregular-whitespace": true,
+    "no-sparse-arrays": true,
+    "no-unexpected-multiline": true,
+    "no-multi-spaces": true,
+    "array-bracket-spacing": [
+      true,
+      "always"
+    ],
+    "block-spacing": true,
+    "brace-style": [false],
+    "motorcycle-brace-style": [
+      true,
+      "allman",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "ter-indent": [
+      true,
+      2
+    ],
+    "object-curly-spacing": [
+      true,
+      "always"
+    ],
+    "space-in-parens": [
+      true,
+      "never"
+    ],
+    "ter-arrow-body-style": [
+      true,
+      "as-needed"
+    ],
+    "ter-arrow-spacing": [
+      true
+    ],
+    "conditional-expression-parens": true,
+    "ext-variable-name": [
+      false
+    ],
+    "max-params": [
+      true,
+      5
+    ],
+    "multiline-arrow": [
+      true,
+      "require-parens"
+    ],
+    "no-duplicate-imports": true,
+    "no-param-reassign": true,
+    "prefer-literal": [
+      "object",
+      "function"
+    ],
+    "readonly-interface": true,
+    "readonly-indexer": true,
+    "readonly-array": false,
+    "no-let": false,
+    "no-this": false,
+    "no-class": false,
+    "no-new": false,
+    "no-mixed-interface": true,
+    "no-expression-statement": false,
+    "no-arguments": true,
+    "no-label": false,
+    "no-semicolon-interface": false,
+    "mocha-avoid-only": true,
+    "no-banned-terms": true,
+    "no-empty-line-after-opening-brace": true,
+    "no-unnecessary-bind": true,
+    "no-unnecessary-semicolons": true
   }
 }

@@ -4,7 +4,10 @@
   "description": "TSLint for Motorcycle.js Projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && tslint 'src/**/*.ts'",
+    "build": "tsc",
+    "preversion": "npm run build",
+    "postversion": "npm login && npm publish"
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,9 @@
     "tslint-immutable": "^2.1.0",
     "tslint-microsoft-contrib": "^4.0.0",
     "vrsource-tslint-rules": "^4.0.1"
+  },
+  "devDependencies": {
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
   }
 }
