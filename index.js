@@ -298,7 +298,7 @@ module.exports = {
     "ter-arrow-spacing": [
       true
     ],
-    "conditional-expression-parens": true,
+    "conditional-expression-parens": false,
     "ext-variable-name": [
       false
     ],
