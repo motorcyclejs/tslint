@@ -7,10 +7,12 @@ TSLint Configuration for Motorcycle.js
 npm install --save-dev @motorcycle/tslint
 ```
 
-## Use is
+## Use it
 ```typescript
 // tslint.json
 {
-  "extends": "@motorcycle/tslint"
+  "extends": [
+    "@motorcycle/tslint"
+  ]
 }
 ```
