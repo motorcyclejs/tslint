@@ -1,6 +1,6 @@
 {
   "name": "@motorcycle/tslint",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "TSLint for Motorcycle.js Projects",
   "main": "index.js",
   "scripts": {
