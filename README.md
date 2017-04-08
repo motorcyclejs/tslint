@@ -1,4 +1,4 @@
-# Motorcycle TSLint Confiuration
+# Motorcycle TSLint Configuration
 
 TSLint Configuration for Motorcycle.js
 
