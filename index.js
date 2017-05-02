@@ -114,7 +114,6 @@ module.exports = {
       true,
       "allow-fast-null-checks"
     ],
-    "no-unused-new": true,
     "no-unused-variable": [
       true,
       "check-parameters"
