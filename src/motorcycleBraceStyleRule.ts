@@ -1,10 +1,6 @@
 import * as Lint from 'tslint'
 import * as ts from 'typescript'
 
-export type Foo = {
-  a: number,
-}
-
 export class Rule extends Lint.Rules.AbstractRule {
   public static FAILURE_STRING = {
     open: 'Opening curly brace appears on the same line as controlling statement.',
@@ -52,7 +48,13 @@ class BraceStyleWalker extends Lint.RuleWalker {
       parentKind === ts.SyntaxKind.FunctionDeclaration
 
     if (parentKind === ts.SyntaxKind.ArrowFunction ||
-      parentKind === ts.SyntaxKind.ElseKeyword)
+      parentKind === ts.SyntaxKind.ElseKeyword ||
+      parentKind === ts.SyntaxKind.ForStatement ||
+      parentKind === ts.SyntaxKind.ForInStatement ||
+      parentKind === ts.SyntaxKind.ForOfStatement ||
+      parentKind === ts.SyntaxKind.TryStatement ||
+      parentKind === ts.SyntaxKind.CatchKeyword ||
+      parentKind === ts.SyntaxKind.CatchClause)
       return
 
     if (isFunction && parametersAreOnSameLine(block))
@@ -126,11 +128,11 @@ class BraceStyleWalker extends Lint.RuleWalker {
         openingCurlyBrace.getStart(),
         openingCurlyBrace.getWidth(),
         Rule.FAILURE_STRING.open,
-        this.createFix(Lint.Replacement.replaceFromTo(
+        this.createReplacement(
           openingCurlyBrace.pos,
           openingCurlyBrace.pos + 1,
           `\n` + makeIndentation(indent),
-        )),
+        ),
       ))
     }
 
