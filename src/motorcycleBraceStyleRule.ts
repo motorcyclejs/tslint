@@ -128,11 +128,6 @@ class BraceStyleWalker extends Lint.RuleWalker {
         openingCurlyBrace.getStart(),
         openingCurlyBrace.getWidth(),
         Rule.FAILURE_STRING.open,
-        this.createReplacement(
-          openingCurlyBrace.pos,
-          openingCurlyBrace.pos + 1,
-          `\n` + makeIndentation(indent),
-        ),
       ))
     }
 
